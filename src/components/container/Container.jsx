@@ -1,13 +1,20 @@
 import { Outlet } from "react-router";
 import { Header, Sidebar } from "../index";
+import { useState } from "react";
 
 function Container() {
+
+    const [sidebarOpen, setSidebarOpen] = useState(true);
+
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
   return (
-    <div className="min-h-screen flex flex-col ">
-    <Header />
-    <div className="flex flex-1">
-      <Sidebar />
-      <div className="flex-1">
+    <div className="min-h-screen ">
+    <Header sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
+    <div className="">
+      <Sidebar sidebarOpen={sidebarOpen} />
+      <div className="">
         <Outlet />
       </div>
     </div>
