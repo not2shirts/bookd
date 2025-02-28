@@ -5,6 +5,7 @@ import { useState } from "react";
 function Container() {
 
     const [sidebarOpen, setSidebarOpen] = useState(true);
+    const [Loggedin, setLoggedin] = useState(false)
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -15,7 +16,7 @@ function Container() {
     <div className="">
       <Sidebar sidebarOpen={sidebarOpen} />
       <div className="">
-        <Outlet />
+        <Outlet Loggedin={Loggedin} />
       </div>
     </div>
   </div>
