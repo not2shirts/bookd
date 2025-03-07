@@ -6,7 +6,7 @@ function Sidebar({sidebarOpen}) {
     const location = useLocation();
 
   return (
-    <div><div className="px-4 hidden lg:block" >
+    <div><div className="px-4 z-50 hidden lg:block" >
 
     <ul className=" font-light flex flex-col gap-1">
         <li><Link  className={`${location.pathname === '/'? "text-xl": '' }`} to='/' >Home</Link></li>

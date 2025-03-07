@@ -1,8 +1,10 @@
 import React from 'react'
 
-function AddBook() {
+function AddBook({setShowComponent}) {
   return (
-    <div>AddBook</div>
+    <div>
+        <div>Addbook</div>
+    </div>
   )
 }
 

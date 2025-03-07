@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Login() {
+function Login({setShowComponent}) {
   return (
-    <div >
-
+    <div  className='relative'>
+        <div className='absolute right-1 m-2' onClick={() => (setShowComponent(false))} >❌</div>
         <h2>Sign in with google</h2>
         <button>Sign in with Google</button>
 
