@@ -5,7 +5,9 @@ import { useOutletContext } from "react-router-dom";
 
 
 function Home() {
-    const [Loggedin] = useOutletContext();
+    const [Loggedin,setLoggedin] = useOutletContext();
+
+
 
 const [showComponent, setShowComponent] = useState(false);
 
@@ -31,7 +33,7 @@ const [showComponent, setShowComponent] = useState(false);
          </div>
         ) : (   <div className=" fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center  transition-transform">
             <div className="bg-white p-6 rounded-lg max-w-2xl w-full  transition">
-               <Login setShowComponent={setShowComponent} />
+               <Login setShowComponent={setShowComponent} setLoggedin={setLoggedin} />
             </div>
           </div> ))}
     </div>
